@@ -1,0 +1,442 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    font-family: serif;
+    background: #EEEAE3;
+}
+
+@font-face {
+    font-family: "Corinthia";
+    src: url(../assets/fonts/Corinthia/Corinthia-Regular.ttf);
+}
+
+.layout{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+header{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/terrazaBarracuda.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav{
+    
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+
+}
+
+/***************FLECHA ATRÁS**********************/
+
+.flechAtras{
+    position: fixed;
+
+    top: 15px;
+    left: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    transition: transform .2s ease;
+}
+
+.flechAtras::before,
+.flechAtras::after{
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+    height: 3px;
+
+    background: black;
+
+    border-radius: 10px;
+
+    left: 6px;
+}
+
+.flechAtras::before{
+    transform: rotate(-45deg);
+    top: 13px;
+}
+
+.flechAtras::after{
+    transform: rotate(45deg);
+    top: 24px;
+}
+
+.flechAtras:hover{
+    transform: translateX(-8px);
+}
+
+/*********************************************/
+
+.idiomas{
+    display: flex;
+    gap: 20px;
+
+}
+
+.idiomas img{
+    width: 35px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.idiomas img:hover{
+    transform: scale(1.1);
+}
+
+
+.contenedor{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulo{
+    font-family: "Corinthia";
+    font-weight: lighter;
+    text-align: center;
+    font-size: 7rem;
+    margin-bottom: 20px;
+}
+
+#mensaje1{
+    font-family: serif;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+time{
+    font-family: serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.ubi{
+    font-family: serif;
+    font-size: 1.5rem;
+
+
+}
+
+.cta{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.btn-confirmar{
+    padding: 12px 30px;
+
+    background: rgba(255,255,255,.2);
+
+    color: white;
+
+    text-decoration: none;
+
+    border: 2px solid white;
+    border-radius: 30px;
+
+    backdrop-filter: blur(5px);
+
+    transition: .3s;
+}
+
+.btn-confirmar:hover{
+    background: white;
+    color: black;
+}
+
+/********* FLECHA **********/
+
+.flecha{
+    width: 25px;
+    height: 25px;
+
+    border-right: 4px solid white;
+    border-bottom: 4px solid white;
+
+    transform: rotate(45deg);
+
+    animation: bajar 1.5s infinite;
+}
+
+@keyframes bajar{
+
+    0%{
+        transform: rotate(45deg) translate(0,0);
+    }
+
+    50%{
+        transform: rotate(45deg) translate(10px,10px);
+    }
+
+    100%{
+        transform: rotate(45deg) translate(0,0);
+    }
+
+}
+
+
+main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.info1{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.cajaImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cajaImg p{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.cajaImg img{
+    width: 600px;
+    max-width: 100%;
+    margin: 10px;
+}
+
+.info1 iframe{
+    width: 600px;
+    max-width: 100%;
+    height: 374px;
+    margin: 10px;
+    margin-top: 33px;
+}
+
+.info2{
+    display: flex;
+    width: 100%;
+    margin: 40px;
+    padding: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    gap: 10px;
+    background-color: #291C0E;
+}
+
+.info2 p{
+    color: #A78D78;
+    max-width: 1000px;
+    text-align: center;
+}
+
+
+/***************FORMULARIO*********************/
+.rsvp{
+    max-width: 700px;
+    width: 80%;
+    margin: 100px auto;
+    padding: 50px;
+
+    background: #fffdf9;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+
+    text-align: center;
+}
+
+.rsvp h2{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitulo{
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.campo{
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.campo label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+input,
+textarea{
+    width: 100%;
+    padding: 14px;
+
+    border: 1px solid #ddd;
+    border-radius: 12px;
+
+    margin-bottom: 12px;
+
+    font-size: 1rem;
+}
+
+.radio-group{
+    display: flex;
+    gap: 30px;
+}
+
+button{
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: #291C0E;
+    color: #E1D4C2;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+button:hover{
+    transform: translateY(-2px);
+}
+
+.oculto{
+    display: none;
+}
+
+#gracias{
+    padding: 30px;
+
+}
+
+/*************ALBUM DE BODA*******************/
+.album-boda{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.album-boda h2{
+    font-family: "Corinthia";
+    font-size: 4rem;
+    font-weight: lighter;
+    color: #A78D78;
+}
+
+.album-boda p{
+    font-size: 1.5rem;
+}
+
+.btn-subir{
+    margin-top: 20px;
+    display:inline-block;
+
+    padding:15px 30px;
+
+    background:#A78D78;
+    color:#E1D4C2;
+
+    text-decoration:none;
+
+    border-radius:30px;
+}
+
+.btn-subir:hover{
+    opacity:.9;
+}
+
+/*******************************************/
+
+.section-info{
+    background: #A78D78;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.info3{
+    max-width: 1000px;
+    width: 80%;
+    font-size: 1.3rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    color: #E1D4C2;
+}
+
+.info3 h3{
+    font-family: "Corinthia";
+    font-weight: lighter;
+    font-size: 4rem;
+    color: #291C0E;
+}
+
