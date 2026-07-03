@@ -18,25 +18,18 @@
                         <img src="../img/banderaEspania.svg" alt="Español">
                     </a>
                     <a href="#" data-lang="it">
-                        <img src="../img/banderaItalia.svg" alt="Italiano ">
+                        <img src="../img/banderaItalia.svg" alt="Italiano">
                     </a>
                 </div>
             </nav>
             <div class="contenedor">
-                <h1 id="titulo"> Donde y cuándo?</h1>
-                <time datetime="2026-12-05" id="fecha">
-                05 de Diciembre de 2026
-                </time>
+                <h1 id="titulo">¿Dónde y cuándo?</h1>
+                <time datetime="2026-12-05" id="fecha">05 de Diciembre de 2026</time>
                 <p id="mensaje1">Terraza del restaurante Barracuda</p>
                 <div class="cta">
-                        <a href="#confirmacion" class="btn-confirmar" id="conf">
-                        Confirmar asistencia
-                        </a>
-
-                        <a href="#confirmacion" class="flecha"></a>
+                    <a href="#confirmacion" class="btn-confirmar" id="conf">Confirmar asistencia</a>
+                    <a href="#confirmacion" class="flecha"></a>
                 </div>
-
-
             </div>
         </header>
         <main>
@@ -49,132 +42,66 @@
             </section>
 
             <section class="info2">
-                <p id="pp1">
-                    Lo más importante para nosotros es poder compartir este día tan especial con ustedes y celebrar juntos un momento que recordaremos siempre.
-                </p>
-                <p id="pp2">
-                    Por eso hemos preparado una celebración tipo cóctel pensada para disfrutar, brindar y crear recuerdos inolvidables: varios entrantes, paella y 5 horas de barra libre.
-                </p>
-                <p id="pp3">
-                    La aportación para asistir será de 70€ por persona. Su presencia es el mejor regalo que podemos recibir, así que no hace falta ningún otro detalle.
-                </p>
-                <p id="pp4">
-                    Les dejamos aquí nuestro número de cuenta:
-                </p>
-                <p id="pp5">
-                    ES09 0182 6097 7102 0156 8286
-                </p>
+                <p id="pp1">Lo más importante para nosotros es poder compartir este día tan especial con ustedes y celebrar juntos un momento que recordaremos siempre.</p>
+                <p id="pp2">Por eso hemos preparado una celebración tipo cóctel pensada para disfrutar, brindar y crear recuerdos inolvidables: varios entrantes, paella y 5 horas de barra libre.</p>
+                <p id="pp3">La aportación para asistir será de 70€ por persona. Su presencia es el mejor regalo que podemos recibir, así que no hace falta ningún otro detalle.</p>
+                <p id="pp4">Les dejamos aquí nuestro número de cuenta:</p>
+                <p id="pp5">ES09 0182 6097 7102 0156 8286</p>
             </section>
 
             <section id="confirmacion" class="rsvp">
-
                 <h2 id="pp6">Por favor confirmar asistencia</h2>
+                <p class="subtitulo" id="pp7">¡Solo te llevará un minuto!</p>
 
-                <p class="subtitulo" id="pp7">
-                    ¡Solo te llevará un minuto!
-                </p>
-
-                <form
-                id="formulario-rsvp"
-                action="https://script.google.com/macros/s/AKfycbxXPv_NycST4-Ohq5_TFpUtHzYG-YMpkXzXsXU-eakNnEwDM7KQfye4cKkTGihkrot0/exec"
-                method="POST"
-                target="iframe-envio">
-
+                <form id="formulario-rsvp" action="https://script.google.com/macros/s/AKfycbzNo4paQQEiIi9NG1lRZ14iE0fkUC145vP-DQ4ZYLWz8xwID_zZdzfv-ixJXU10rmBO/exec" method="POST">
                     <div class="campo">
                         <label id="pp8">Invitados</label>
-
                         <input type="text" name="invitado1" id="placeholder1" placeholder="Nombre y apellido" required>
                         <input type="text" name="invitado2" id="placeholder2" placeholder="Segundo invitado (opcional)">
                         <input type="text" name="invitado3" id="placeholder3" placeholder="Tercer invitado (opcional)">
                     </div>
 
                     <div class="campo">
-
                         <label id="pp9">¿Vendrás a celebrar con nosotros?</label>
-
                         <div class="radio-group">
-                            <label id="rad1">
+                            <label>
                                 <input type="radio" name="asistencia" value="Sí" required>
-                                Sí
+                                <span id="rad1">Sí</span>
                             </label>
-
-                            <label id="rad2">
+                            <label>
                                 <input type="radio" name="asistencia" value="No">
-                                No
+                                <span id="rad2">No</span>
                             </label>
                         </div>
-
                     </div>
 
-                    <div id="info-si" class="oculto">
-
-                        <label id="alergias">
-                            Intolerancias, alergias, vegetariano o vegano
-                        </label>
-
-                        <textarea
-                            name="alergias"
-                            rows="5"
-                            placeholder="Indícanos cualquier necesidad alimentaria" required>
-                        </textarea>
-
+                    <div id="info-si" style="display: none;">
+                        <label id="alergias">Intolerancias, alergias, vegetariano o vegano</label>
+                        <textarea name="alergias" rows="5" placeholder="Indícanos cualquier necesidad alimentaria"></textarea>
                     </div>
 
-                    <button type="submit" id="boton">
-                        Enviar respuesta
-                    </button>
-
+                    <button type="submit" id="boton">Enviar respuesta</button>
                 </form>
 
-                <iframe
-                    name="iframe-envio"
-                    style="display:none">
-                </iframe>
-
-                <div id="gracias" class="oculto">
-
-                    <h3 id="gracias1">
-                        Gracias por confirmarnos tu asistencia
-                    </h3>
-
-                    <p id="gracias2">
-                        Estamos deseando compartir este día tan especial contigo.
-                    </p>
-
+                <div id="gracias" style="display: none;">
+                    <h3 id="gracias1">Gracias por confirmarnos tu asistencia</h3>
+                    <p id="gracias2">Estamos deseando compartir este día tan especial contigo.</p>
                 </div>
-
             </section>
+
             <section class="album-boda">
-
                 <h2 id="fot1">Comparte tus fotos</h2>
-
-                <p id="fot2">
-                    Ayúdanos a guardar los recuerdos más especiales de este día.
-                    Comparte aquí las fotos y vídeos de esos momentos que merezca la pena recordar.
-                    ❤️
-                </p>
-
-                <a
-                    href="https://web.dotstheapp.com/a?group=2506834&dlBy=donieljpr&code=vu6rLLTHwN8D&utm_source=guest&utm_medium=share&utm_campaign=guest_event_album&force_app=1"
-                    target="_blank"
-                    class="btn-subir"
-                    id="fot3">
-                    Subir fotos
-                </a>
-
+                <p id="fot2">Ayúdanos a guardar los recuerdos más especiales de este día. Comparte aquí las fotos y vídeos de esos momentos que merezca la pena recordar. ❤️</p>
+                <a href="https://web.dotstheapp.com/a?group=2506834&dlBy=donieljpr&code=vu6rLLTHwN8D&utm_source=guest&utm_medium=share&utm_campaign=guest_event_album&force_app=1" target="_blank" class="btn-subir" id="fot3">Subir fotos</a>
             </section>
+
             <section class="section-info">
                 <article class="info3">
                     <h3 id="dudas">¿Tienes alguna duda?</h3>
-                    <P id="dudas2">Una vez más te damos gracias por formar parte de esto, si tienes alguna duda o necesitas hablar con nosotros aquí tienes nuestros numeros:</P>
-                    <p >
-                        Sara: +34 600002472
-                    </p>
-                    <p>
-                        Doniel: +34 622352373
-                    </p>
+                    <p id="dudas2">Una vez más te damos gracias por formar parte de esto, si tienes alguna duda o necesitas hablar con nosotros aquí tienes nuestros números:</p>
+                    <p>Sara: +34 600002472</p>
+                    <p>Doniel: +34 622352373</p>
                 </article>
-
             </section>
         </main>
     </div>

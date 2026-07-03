@@ -295,86 +295,92 @@ main{
 
 
 /***************FORMULARIO*********************/
-.rsvp{
+/***************FORMULARIO CORREGIDO*********************/
+.rsvp {
     max-width: 700px;
     width: 80%;
     margin: 100px auto;
     padding: 50px;
-
     background: #fffdf9;
-
     border-radius: 25px;
-
     box-shadow: 0 15px 40px rgba(0,0,0,.08);
-
     text-align: center;
 }
 
-.rsvp h2{
+.rsvp h2 {
     font-size: 3rem;
     margin-bottom: 10px;
 }
 
-.subtitulo{
+.subtitulo {
     color: #777;
     margin-bottom: 40px;
 }
 
-.campo{
+.campo {
     margin-bottom: 25px;
     text-align: left;
 }
 
-.campo label{
+.campo label {
     display: block;
     margin-bottom: 10px;
     font-weight: 600;
 }
 
-input,
-textarea{
+input[type="text"], textarea {
     width: 100%;
     padding: 14px;
-
     border: 1px solid #ddd;
     border-radius: 12px;
-
     margin-bottom: 12px;
-
     font-size: 1rem;
+    box-sizing: border-box;
 }
 
-.radio-group{
+/* Modificado para asegurar comportamiento flex en los elementos de opción */
+.radio-group {
     display: flex;
     gap: 30px;
+    margin-top: 10px;
 }
 
-button{
+.radio-group label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: normal !important;
+}
+
+/* Forzar visualización de los círculos nativos del navegador */
+.radio-group input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    appearance: auto !important;
+    -webkit-appearance: radio !important;
+}
+
+button {
     padding: 15px 40px;
     border: none;
     border-radius: 30px;
     cursor: pointer;
     background: #291C0E;
     color: #E1D4C2;
-    font-size: 1rem;
+    font-size: 1.5rem;
     transition: .3s;
 }
 
-button:hover{
+button:hover {
     transform: translateY(-2px);
 }
 
-.oculto{
-    display: none;
-}
-
-#gracias{
+#gracias {
     padding: 30px;
-
-}
-
-#boton{
-    font-size: 1.5rem;
 }
 
 /*************ALBUM DE BODA*******************/
