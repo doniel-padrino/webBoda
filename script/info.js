@@ -19,7 +19,6 @@ const traducciones = {
         alergias:"Intolerancias, alergias, vegetariano o vegano",
         boton:"Enviar respuesta",
         gracias1:"Gracias por confirmarnos tu asistencia",
-        gracias2:"Estamos deseando compartir este día tan especial contigo.",
         fot1:"Comparte tus fotos",
         fot2:"Ayúdanos a guardar los recuerdos más especiales de este día. Comparte aquí las fotos y vídeos de esos momentos que merezca la pena recordar.❤️",
         fot3:"Subir fotos",
@@ -49,7 +48,6 @@ const traducciones = {
         alergias: "Intolleranze, allergie, vegetariano o vegano",
         boton: "Invia risposta",
         gracias1: "Grazie per aver confermato la tua presenza",
-        gracias2: "Non vediamo l'ora di condividere questo giorno così speciale con te.",
         fot1: "Condividi le tue foto",
         fot2: "Aiutaci a conservare i ricordi più speciali di questo giorno. Condividi qui le foto e i video di quei momenti che vale la pena ricordare.❤️",
         fot3: "Carica foto",
@@ -81,7 +79,6 @@ function cambiarIdioma(idioma){
     document.getElementById("alergias").textContent = traducciones[idioma].alergias;
     document.getElementById("boton").textContent = traducciones[idioma].boton;
     document.getElementById("gracias1").textContent = traducciones[idioma].gracias1;
-    document.getElementById("gracias2").textContent = traducciones[idioma].gracias2;
     document.getElementById("fot1").textContent = traducciones[idioma].fot1;
     document.getElementById("fot2").textContent = traducciones[idioma].fot2;
     document.getElementById("fot3").textContent = traducciones[idioma].fot3;
