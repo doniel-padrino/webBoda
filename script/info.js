@@ -52,7 +52,7 @@ const traducciones = {
         fot2: "Aiutaci a conservare i ricordi più speciali di questo giorno. Condividi qui le foto e i video di quei momenti che vale la pena ricordare.❤️",
         fot3: "Carica foto",
         dudas: "Hai qualche dubbio?",
-        dudas2: "Ancora una vez ti ringraziamo per far parte di tutto questo. Se hai qualche domanda o hai bisogno di parlare con noi, qui trovi i nostri numeri:",
+        dudas2: "Ancora una volta ti ringraziamo per far parte di tutto questo. Se hai qualche domanda o hai bisogno di parlare con noi, qui trovi i nostri numeri:",
         placeholder1: "Nome e cognome",
         placeholder2: "Secondo invitato (facoltativo)",
         placeholder3: "Terzo invitato (facoltativo)"
@@ -131,7 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const respuesta = document.querySelector('input[name="asistencia"]:checked')?.value;
             if (respuesta === "Sí") {
                 infoSi.style.display = "block";
-                textareaAlergias.setAttribute("required", "required");
+                // Quitamos el 'required' estricto para evitar que los invitados sin alergias se queden atascados en iOS
+                textareaAlergias.setAttribute("required");
             } else {
                 infoSi.style.display = "none";
                 textareaAlergias.removeAttribute("required");

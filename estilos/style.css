@@ -4,11 +4,19 @@
     box-sizing: border-box;
 }
 
+html {
+    /* Evita que Safari en iPhone reescale el texto a su antojo */
+    -webkit-text-size-adjust: 100%;
+}
+
 body{
     display: flex;
     justify-content: center;
     font-family: serif;
     background: #EEEAE3;
+    /* Añade esto para evitar desbordamientos horizontales raros en iOS */
+    overflow-x: hidden; 
+    width: 100vw;
 }
 
 @font-face {
@@ -35,7 +43,8 @@ body{
 
 header{
     width: 100%;
-    min-height: 70vh;
+    /* Cambia min-height: 70vh por svh o dvh para que la barra de Safari no empuje el contenido */
+    min-height: 70dvh;
     position: relative;
     color: white;
     display: flex;
@@ -96,7 +105,8 @@ nav{
 
 #titulo{
     font-family: "Corinthia";
-    font-size: 9rem;
+    /* 9rem es enorme en iPhone. Usamos una función clamp para que en móvil mida menos y en PC mida 9rem */
+    font-size: clamp(4.5rem, 10vw, 9rem);
     font-weight: lighter;
     margin-bottom: 10px;
     text-align: center;
@@ -166,7 +176,9 @@ main{
 }
 
 .cards{
-    width: 400px;
+    /* Cambia el ancho fijo por uno responsivo para que no se corte en pantallas de iPhone de 375px */
+    width: 100%;
+    max-width: 400px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -204,9 +216,10 @@ main{
 section p{
     margin: 5px;
     text-align: center;
-    width: 180px;
+    /* Quita el width fijo de 180px que rompe el texto largo en móviles */
+    width: auto;
     color: gray;
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 4vw, 2rem); /* Letra fluida */
 }
 
 .info {
@@ -220,7 +233,8 @@ section p{
     width: 100%;
     text-decoration: none;
     font-family: "Corinthia";
-    font-size: 5rem;
+    /* Ajuste para que la tipografía Corinthia gigante no rompa el contenedor */
+    font-size: clamp(3rem, 12vw, 5rem);
     font-weight: bold;
     line-height: 0.7;
     text-align: center;
