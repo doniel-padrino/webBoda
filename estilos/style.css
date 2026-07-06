@@ -266,3 +266,41 @@ section p{
         transform: scale(1);
     }
 }
+
+/* --- AJUSTES PARA PANTALLAS MÓVILES (MÁXIMO 600PX) --- */
+@media (max-width: 600px) {
+    /* Reducimos el espacio entre los bloques del contador */
+    .contador {
+        gap: 8px;
+        margin: 30px 0;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* Hacemos que los bloques se adapten proporcionalmente */
+    .tiempo {
+        width: 22%; /* Se distribuyen equitativamente en el ancho de la pantalla */
+        min-width: 70px; 
+        padding: 10px 5px; /* Reducimos el padding para ganar espacio */
+        border-radius: 10px;
+    }
+
+    /* Achicamos un poco el tamaño de los números */
+    .tiempo span {
+        font-size: 1.6rem; 
+    }
+
+    /* Achicamos las etiquetas (Días, Horas, etc.) */
+    .tiempo p {
+        font-size: 0.8rem !important;
+    }
+
+    /* Ajuste extra: Evitamos que la fecha y la ubicación también se vean gigantes */
+    time {
+        font-size: 1.6rem;
+    }
+    
+    .ubi {
+        font-size: 1.3rem;
+    }
+}
